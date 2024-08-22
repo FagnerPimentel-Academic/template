@@ -1,0 +1,39 @@
+version: "3.2"
+
+services:
+
+  principal:
+    build:
+      context: .
+    volumes:
+      - ../build:/build
+      - ../:/tex
+    stdin_open: true
+    tty: true
+    command:
+      - /bin/bash
+      - -c
+      - |
+        pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=/build principal.tex &&
+        makeglossaries -d /build principal &&
+        biber /build/principal &&
+        makeindex /build/principal.idx &&
+        pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=/build principal.tex
+
+  ata:
+    build:
+      context: .
+    volumes:
+      - ../build:/build
+      - ../:/tex
+    stdin_open: true
+    tty: true
+    command:
+      - /bin/bash
+      - -c
+      - |
+        pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=/build ata.tex &&
+        makeglossaries -d /build ata &&
+        biber /build/ata &&
+        makeindex /build/ata.idx &&
+        pdflatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -output-directory=/build ata.tex

@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%            author(s): Fagner de Assis Moura Pimentel
+%%            description: Modelo de trabalhos acadêmicos
+%%
+%%                  **  NÂO ALTERAR ESTE ARQUIVO **
+%%       No arquivo *info.tex* selecione a fase atual do seu trabalho.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[deposito]{fei}
+
+\usepackage[colorinlistoftodos,textsize=tiny]{todonotes}
+\usepackage{xcolor,colortbl}
+\usepackage{ifthen}
+\usepackage{hyperref}
+
+\addbibresource{referencias.bib}
+\input{info.tex}
+
+% \usepackage[utf8]{inputenc}
+% \usepackage[table]{xcolor}
+% \usepackage{biblatex}
+
+% \usepackage[
+%backend=biber,
+%style=alphabetic,
+%sorting=ynt
+%]{biblatex}
+
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.7}
+% \usepackage{pgfplots}
+% \usetikzlibrary{calc}
+% \usepackage{amsmath}
+% \usepackage{subcaption}
+% \usepackage[utf8]{inputenc}
+% \usepackage{comment}
+\usepackage{acronym} 
+\usepackage[symbols]{glossaries}
+
+\author{\alunos}
+
+\title{\titulo}
+\subtitulo{\\\sub}
+
+\input{Texto/glossaries}
+
+\makeindex
+\makeglossaries
+
+\begin{document}
+\newcommand{\gray}{\cellcolor{black!25}} % definição de cor usado nas células das tabelas
+
+\maketitle
+\begin{folhaderosto}
+    \descricao
+\end{folhaderosto}
+
+\tableofcontents
+
+% if
+\ifthenelse{\equal{\faseAtual}{Projeto}}
+% then
+{
+
+    \input{Texto/resumo}
+    \input{Texto/introducao}
+    \input{Texto/conceitos}
+    \input{Texto/trabalhos}
+    \input{Texto/metodologia}
+    \input{Texto/cronograma}
+} 
+% else
+{
+    
+    \fichacatalografica
+    \folhadeaprovacao
+    \input{Texto/dedicatoria}
+    \input{Texto/agradecimentos}
+    \input{Texto/epigrafe}
+    \listoffigures
+    \listoftables
+    \listofalgorithms
+    \glsaddall
+    % \printglossaries
+
+    \input{Texto/resumo}
+    \input{Texto/introducao}
+    \input{Texto/conceitos}
+    \input{Texto/trabalhos}
+    \input{Texto/metodologia}
+    
+    % \input{Texto/experimentos}
+    \input{Texto/resultados}
+    \input{Texto/conclusao}
+    
+}
+
+\printbibliography
+
+%\printindex
+
+\end{document}

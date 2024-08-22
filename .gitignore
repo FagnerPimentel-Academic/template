@@ -1,0 +1,4 @@
+Texto/build/*
+!Texto/build/principal.pdf
+!Texto/build/ficha.pdf
+!Texto/build/ata.pdf
