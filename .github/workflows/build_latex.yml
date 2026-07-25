@@ -1,0 +1,40 @@
+name: Build LaTeX
+
+on:
+  push:
+  pull_request:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: ghcr.io/xu-cheng/texlive-full:latest
+      
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Compile
+        continue-on-error: true
+        run: make all
+
+      - name: Upload Principal
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: Principal
+          path: latex/principal.pdf
+
+      - name: Upload Ata
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: Ata
+          path: latex/ata.pdf
+
+      - name: Upload Ficha
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: Fichar
+          path: latex/ficha.pdf
