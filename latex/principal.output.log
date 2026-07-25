@@ -1,0 +1,31 @@
+40:/usr/share/texlive/texmf-dist/tex/latex/memoir/memoir.cls:97: LaTeX Error: Comm
+184:Package hyperref Warning: Option `pdftex' has already been used,
+332:Package glossaries Warning: Overriding \printglossary on input line 6158.
+335:Package glossaries Warning: Overriding `theglossary' environment on input line 
+350:LaTeX Warning: Unused global option(s):
+365:Package biblatex Warning: File 'brazilian-abnt-abnt.lbx' not found!
+388:Package biblatex Warning: The following entry could not be found
+396:Package todonotes Warning: The length marginparwidth is less than 2cm and will 
+402:LaTeX Warning: Marginpar on page 1 moved by 0.01201pt.
+405:LaTeX Warning: Marginpar on page 1 moved by 0.02402pt.
+408:LaTeX Warning: Marginpar on page 1 moved by 0.03603pt.
+411:LaTeX Warning: Marginpar on page 1 moved by 0.04803pt.
+420:LaTeX Warning: Marginpar on page 1 moved by 0.06004pt.
+423:LaTeX Warning: Marginpar on page 1 moved by 0.00806pt.
+428:LaTeX Warning: Marginpar on page 1 moved by 0.01201pt.
+431:LaTeX Warning: Marginpar on page 1 moved by 0.02402pt.
+434:LaTeX Warning: Marginpar on page 1 moved by 0.03603pt.
+437:LaTeX Warning: Marginpar on page 1 moved by 0.04803pt.
+481:./principal.tex:96: Package pdfpages Error: Cannot find file `ficha.pdf'.
+490:./principal.tex:96: Package pdfpages Error: Cannot find file `1'.
+509:./principal.tex:96: Package pdfpages Error: Page 1 of `\AM@currentdocname ' doe
+526:./principal.tex:96: Package pdfpages Error: Cannot find file `ata.pdf'.
+535:./principal.tex:96: Package pdfpages Error: Cannot find file `1'.
+554:./principal.tex:96: Package pdfpages Error: Page 1 of `\AM@currentdocname ' doe
+567:LaTeX Warning: Citation 'george_bernard' undefined on input line 2.
+582:Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+592:Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+602:Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+612:Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+620:Package glossaries Warning: No \printglossary or \printglossaries found. 
+628:Output written on ../build/principal.pdf (21 pages, 158422 bytes).
