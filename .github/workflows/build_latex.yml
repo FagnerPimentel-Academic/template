@@ -18,23 +18,16 @@ jobs:
         continue-on-error: true
         run: make all
 
-      - name: Upload Principal
+      - name: Upload PDFs
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: Principal
-          path: latex/principal.pdf
+          name: PDFs
+          path: latex/*.pdf
 
-      - name: Upload Ata
+      - name: Upload log
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: Ata
-          path: latex/ata.pdf
-
-      - name: Upload Ficha
-        if: always()
-        uses: actions/upload-artifact@v7
-        with:
-          name: Fichar
-          path: latex/ficha.pdf
+          name: Log
+          path: latex/*.log
